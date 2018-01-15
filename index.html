@@ -60,6 +60,14 @@
                                     <v-list-tile-title>Operator</v-list-tile-title>
                                 </v-list-tile-content>
                         </v-list-tile>
+                        <v-list-tile @click="router.push({ name: 'farm-farming-list' })" >
+                                <v-list-tile-action>
+                                    <v-icon>settings</v-icon>
+                                </v-list-tile-action>
+                                <v-list-tile-content>
+                                    <v-list-tile-title>Farming</v-list-tile-title>
+                                </v-list-tile-content>
+                        </v-list-tile>
                         <v-list-tile @click="" >
                                 <v-list-tile-action>
                                     <v-icon>settings</v-icon>
@@ -130,14 +138,6 @@
                     </template>
                     <template v-if="account!=null">
                         <v-list-tile @click="">
-                                    <v-list-tile-action>
-                                        <v-icon>settings</v-icon>
-                                    </v-list-tile-action>
-                                    <v-list-tile-content>
-                                        <v-list-tile-title>Profile</v-list-tile-title>
-                                    </v-list-tile-content>
-                        </v-list-tile>
-                        <v-list-tile @click="">
                                 <v-list-tile-action>
                                     <v-icon>settings</v-icon>
                                 </v-list-tile-action>
@@ -190,6 +190,8 @@
     <script type="text/babel" src="js/comp/farm_operator_list.js"></script>
     <script type="text/babel" src="js/comp/farm_address_list.js"></script>
     <script type="text/babel" src="js/comp/farm_address_add.js"></script>
+    <script type="text/babel" src="js/comp/farm_farming_list.js"></script>
+    <script type="text/babel" src="js/comp/farm_farming_add.js"></script>
     <script type="text/babel" src="js/rountes.js"></script>
     <script type="text/babel">
         

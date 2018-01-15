@@ -34,8 +34,16 @@ const store = new Vuex.Store({
 
         list_farm_address : function(state, p) {
             state.farm.address = localdbHelper.listFarmAddress(state.account.usr)
-        }
+        },
 
+        add_farm_farming : function(state, p) {
+            localdbHelper.addFarmFarming(state.account.usr, p)
+            router.push({ name: 'farm-farming-list' })
+        },
+
+        list_farm_farming : function(state, p) {
+            state.farm.farming = localdbHelper.listFarmFarming(state.account.usr)
+        },
 
     }
 })

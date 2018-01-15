@@ -1,9 +1,9 @@
-Vue.component("farm-address-add", {
+Vue.component("farm-farming-add", {
     template: `
     <form>
         <v-text-field
             v-model="name"
-            label="Farm Name"
+            label="Farming Name"
             :counter="100"
             v-validate="'required|max:100'"
             data-vv-name="name"
@@ -11,31 +11,14 @@ Vue.component("farm-address-add", {
         ></v-text-field>
 
         <v-text-field
-          v-model="addr"
-          label="Farm Address"
+          v-model="desc"
+          label="Description"
           :counter="100"
           v-validate="'required|max:100'"
-          data-vv-name="addr"
+          data-vv-name="desc"
           required
       ></v-text-field>
-
-      <v-text-field
-        v-model="food"
-        label="Produced Food"
-        :counter="100"
-        v-validate="'required|max:100'"
-        data-vv-name="food"
-        required
-    ></v-text-field>
-
-    <v-text-field
-        v-model="addr"
-        label="Farm Address"
-        :counter="100"
-        v-validate="'required|max:100'"
-        data-vv-name="addr"
-        required
-    ></v-text-field>        
+        
 
 
         <v-btn @click="submit">submit</v-btn>
@@ -47,14 +30,14 @@ Vue.component("farm-address-add", {
     data () {
       return {
         name: '',
-        addr: ''
+        desc: ''
       }
     },
     methods: {
       submit () {
-        this.$store.commit("add_farm_address", {name:this.name, addr:this.addr})
+        this.$store.commit("add_farm_farming", {name:this.name, desc:this.desc})
         this.clear();
-        router.push({ name: 'farm-address-list' })
+        router.push({ name: 'farm-farming-list' })
       },
       clear () {
         this.name = ''

@@ -8,4 +8,6 @@ var routes = [
     { name: "farm-operator-add", path: '/farm-operator-add', component: { template: '<farm-operator-add></farm-operator-add>' } },
     { name: "farm-address-list", path: '/farm-address-list', component: { template: '<farm-address-list></farm-address-list>' } },
     { name: "farm-address-add", path: '/farm-address-add', component: { template: '<farm-address-add></farm-address-add>' } },
+    { name: "farm-farming-list", path: '/farm-farming-list', component: { template: '<farm-farming-list></farm-farming-list>' } },
+    { name: "farm-farming-add", path: '/farm-farming-add', component: { template: '<farm-farming-add></farm-farming-add>' } },
 ]

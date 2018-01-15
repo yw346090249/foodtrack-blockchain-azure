@@ -51,7 +51,7 @@ class localdbHelper {
         for(let account of localdb.account) {
             if(account.usr===farmName) {
                 account.farm_address = account.farm_address || [];
-                account.farm_address.push({name: opt.name, desc: opt.addr})
+                account.farm_address.push({name: opt.name, addr: opt.addr})
                 return account;
             }
         }
@@ -62,6 +62,25 @@ class localdbHelper {
             if(account.usr===farmName) {
                 account.farm_address = account.farm_address || [];
                 return account.farm_address;
+            }
+        }
+    }
+
+    static addFarmFarming(farmName, opt) {
+        for(let account of localdb.account) {
+            if(account.usr===farmName) {
+                account.farm_farming = account.farm_farming || [];
+                account.farm_farming.push({name: opt.name, desc: opt.desc})
+                return account;
+            }
+        }
+    }
+
+    static listFarmFarming(farmName) {
+        for(let account of localdb.account) {
+            if(account.usr===farmName) {
+                account.farm_farming = account.farm_farming || [];
+                return account.farm_farming;
             }
         }
     }
