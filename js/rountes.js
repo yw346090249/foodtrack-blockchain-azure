@@ -6,4 +6,5 @@ var routes = [
     { name: "admin", path: '/admin', component: { template: '<admin-view></admin-view>' } },
     { name: "farm-operator-list", path: '/farm-operator-list', component: { template: '<farm-operator-list></farm-operator-list>' } },
     { name: "farm-operator-add", path: '/farm-operator-add', component: { template: '<farm-operator-add></farm-operator-add>' } },
+    { name: "farm-profile-view", path: '/farm-profile-view', component: { template: '<farm-operator-add></farm-operator-add>' } },
 ]
