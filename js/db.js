@@ -1,5 +1,5 @@
 const localdb = {
-    account:[],
+    account:[{"usr":"111","pwd":"111","type":"Farm"}],
 }
 const debug=function(msg) {
     console.log(msg)
