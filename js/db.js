@@ -46,4 +46,23 @@ class localdbHelper {
             }
         }
     }
+
+    static addFarmAddress(farmName, opt) {
+        for(let account of localdb.account) {
+            if(account.usr===farmName) {
+                account.farm_address = account.farm_address || [];
+                account.farm_address.push({name: opt.name, desc: opt.addr})
+                return account;
+            }
+        }
+    }
+
+    static listFarmAddress(farmName) {
+        for(let account of localdb.account) {
+            if(account.usr===farmName) {
+                account.farm_address = account.farm_address || [];
+                return account.farm_address;
+            }
+        }
+    }
 }

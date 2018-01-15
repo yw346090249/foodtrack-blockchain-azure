@@ -44,7 +44,7 @@
                     <template v-if="account!=null && account.type==='Farm'">
                             
 
-                        <v-list-tile @click="router.push({ name: 'farm-profile-view' })" >
+                        <v-list-tile @click="router.push({ name: 'farm-address-list' })" >
                             <v-list-tile-action>
                                 <v-icon>settings</v-icon>
                             </v-list-tile-action>
@@ -188,6 +188,8 @@
     <script type="text/babel" src="js/comp/account.js"></script>
     <script type="text/babel" src="js/comp/farm_operator_add.js"></script>
     <script type="text/babel" src="js/comp/farm_operator_list.js"></script>
+    <script type="text/babel" src="js/comp/farm_address_list.js"></script>
+    <script type="text/babel" src="js/comp/farm_address_add.js"></script>
     <script type="text/babel" src="js/rountes.js"></script>
     <script type="text/babel">
         

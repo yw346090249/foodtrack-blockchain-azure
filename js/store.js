@@ -25,6 +25,15 @@ const store = new Vuex.Store({
 
         list_farm_operator : function(state, p) {
             state.farm.operators = localdbHelper.listFarmOperator(state.account.usr)
+        },
+
+        add_farm_address : function(state, p) {
+            localdbHelper.addFarmAddress(state.account.usr, p)
+            router.push({ name: 'farm-address-list' })
+        },
+
+        list_farm_address : function(state, p) {
+            state.farm.address = localdbHelper.listFarmAddress(state.account.usr)
         }
 
 
